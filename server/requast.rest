@@ -1,0 +1,15 @@
+
+GET http://localhost:3000/trending-courses
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Q2NTMzNTcwN2IyNjVmZDRjZWNhZSIsImlhdCI6MTcxNTI5OTYzNX0.6xJimV9UaIfw-jrO2OCDFisHb2VJfGNkjUTRXsSFVP4
+{
+    "title":"1st course",
+    "banner":"https/ss",
+    "des":"wahd nhar",
+    "content":{
+        "chapters":[1,2]
+    },
+    "category":"semestre 4",
+    "level":"licence 2",
+    "tags":["tag 1","tag 2"]
+}
