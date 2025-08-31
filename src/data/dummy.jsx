@@ -9,6 +9,7 @@ import DashSvg from '../components svgs/DashSvg';
 import CourseSvg from '../components svgs/CourseSvg';
 import ArticleSvg from '../components svgs/ArticleSvg';
 import ChatSvg from '../components svgs/ChatSvg';
+import SettingsSvg from '../components svgs/SettingsSvg';
 import CalendarSvg from '../components svgs/CalendarSvg';
 import TodoSvg from '../components svgs/TodoSvg';
 import SettingsSvg from '../components svgs/SettingsSvg';
@@ -105,6 +106,15 @@ export const links = [
       //   name: 'Notification',
       //   icon: <NotificationSvg />,
       // },
+    ],
+  },
+  {
+    title: 'Admin',
+    links: [
+      {
+        name: 'Admin Courses',
+        icon: <SettingsSvg />,
+      },
     ],
   },
 
