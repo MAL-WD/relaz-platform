@@ -14,4 +14,8 @@ export { default as Header } from './Header';
 export { default as Category } from './Category';
 export {default as CoursesDynamic} from './CoursesDynamic'
 export {default as NewCourse} from './NewCourse'
+export {default as AdminRoute} from './AdminRoute'
+export {default as CategoryManager} from './CategoryManager'
+export {default as CourseManager} from './CourseManager'
+export {default as DynamicCategory} from './DynamicCategory'
 // export {default as HistoryNavigation} from './HistoryNavigation'

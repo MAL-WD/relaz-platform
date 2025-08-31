@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import settings from './data/settings.svg'
 import { Navbar, Footer, Sidebar, ThemeSettings, CoursesDynamic } from './components';
-import { Dashboard, Courses, Calendar, Employees, Customers, Kanban, Editor } from './pages';
+import { Dashboard, Courses, Calendar, Employees, Customers, Kanban, Editor, AdminCourses } from './pages';
 import  CoursesRP  from './pages/coursesPages/CoursesRP';
 import  CoursesRPLicence  from './pages/coursesPages/CoursesRPLicence';
 import  CoursesRPMaster  from './pages/coursesPages/CoursesRPMaster';
@@ -56,6 +56,7 @@ import CourseEditor from './pages/CourseEditor';
 import SemestrePage from './components/SemestrePage';
 import LandingPage from './pages/LandingPage';
 import CoursePage from './pages/CoursePage';
+import DynamicCategory from './components/DynamicCategory';
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -129,6 +130,7 @@ const App = () => {
                 <Route path="/Manage Blogs" element={<ManageBlogs />} />
                 <Route path="/search/:query" element={<SearchPage/>} />
                 <Route path="/*" element={<PageNotFound/>} />
+                <Route path="/Admin Courses" element={<AdminCourses />} />
 
                 <Route path="/Courses" element={<Courses />} />
                 <Route path="/Courses/:course_id" element={<CoursePage />} />
@@ -309,6 +311,9 @@ const App = () => {
                       <Route path='/Courses/Technology/Architecture/Master' element={<CoursesSemestre routePath={"All Courses / Technology / Architecture / Master"} linkSemestre={"/Courses/Technology/Architecture/Master"} numSemesters={4}  />}/>
                     <Route path='/Courses/Technology/Engineer-ST' element={<CoursesDegree routePath={"All Courses / Technology / Engineer-ST"} linkLicence={"/Courses/Technology/Engineer-ST/Licence"} linkMaster={"/Courses/Technology/Engineer-ST/Master"} />}/>
                       <Route path='/Courses/Technology/Engineer-ST/Licence' element={<CoursesSemestre routePath={"All Courses / Technology / Engineer-ST / Licence"} linkSemestre={"/Courses/Technology/Engineer-ST/Licence"} numSemesters={4}  />}/>
+
+                {/* Dynamic category routes */}
+                <Route path="/Courses/*" element={<DynamicCategory />} />
 
                 {/* apps  */}
                 <Route path="/To Do List" element={<Kanban />} />
